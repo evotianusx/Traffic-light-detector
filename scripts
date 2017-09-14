@@ -1,0 +1,8 @@
+python3 object_detection/train.py --pipeline_config_path=/home/evotianus/CarND-Capstone/training/ce.config --train_dir=/home/evotianus/CarND-Capstone/traindir2
+
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+
+python3 object_detection/export_inference_graph.py \
+    --pipeline_config_path /home/evotianus/CarND-Capstone/training/ce.config \
+    --trained_checkpoint_prefix /home/evotianus/CarND-Capstone/traindir/model.ckpt-1977 \
+    --output_directory /home/evotianus/CarND-Capstone/output_inference_graph.pb
