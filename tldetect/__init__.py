@@ -76,4 +76,4 @@ class predictor(object):
                 indx=int(counted.most_common()[0][0])
                 pred = (self.categories[indx-1]['name'])
                 pred_score = (scores[0][0])
-                return (img,pred,pred_score)
+                return (img,indx,pred_score)
